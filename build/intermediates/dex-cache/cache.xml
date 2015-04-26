@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        jar="F:\AndroidStudio\Spellathon\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\21.0.3\classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="81d42bf983a8741f4888a6e333e454e4a5e0eeb7">
+        <dex dex="F:\AndroidStudio\Spellathon\app\build\intermediates\pre-dexed\debug\classes-204449ff145795d2b64dae3963206f4f34369db5.jar" />
+    </item>
+    <item
+        jar="F:\AndroidStudio\Spellathon\app\src\libs\StartAppInApp-2.4.12.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="b25b6b006323d4616ecf038dbc038b4eb497cba7">
+        <dex dex="F:\AndroidStudio\Spellathon\app\build\intermediates\pre-dexed\debug\StartAppInApp-2.4.12-9f22cdf65471b8cc6f2b9b1b958692c51ac78561.jar" />
+    </item>
+    <item
+        jar="F:\AndroidStudio\Spellathon\app\build\intermediates\exploded-aar\com.android.support\support-v4\21.0.3\libs\internal_impl-21.0.3.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="01ec05bfbafcc07646ba813000bf2ef11742dd03">
+        <dex dex="F:\AndroidStudio\Spellathon\app\build\intermediates\pre-dexed\debug\internal_impl-21.0.3-cd8bc3ff26cccecfbe424f58e8ad383bcde774cc.jar" />
+    </item>
+    <item
+        jar="F:\AndroidStudio\Spellathon\app\build\intermediates\exploded-aar\com.android.support\support-v4\21.0.3\classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="2c91c949a45a21cdecf26e03951e46c7beec9ad8">
+        <dex dex="F:\AndroidStudio\Spellathon\app\build\intermediates\pre-dexed\debug\classes-52fed79af3ee0888d8a52f679b36c531cb757f76.jar" />
+    </item>
+    <item
+        jar="C:\Users\Avinash\AppData\Local\Android\sdk\extras\android\m2repository\com\android\support\support-annotations\21.0.3\support-annotations-21.0.3.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="4b74cefe1f0c1b819e7260c8627a14674e37fd35">
+        <dex dex="F:\AndroidStudio\Spellathon\app\build\intermediates\pre-dexed\debug\support-annotations-21.0.3-0525436067ab6f9049fff76ca5ad7ccc130210fa.jar" />
+    </item>
+
+</items>

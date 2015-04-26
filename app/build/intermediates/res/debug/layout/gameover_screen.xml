@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FF6ECC7A"
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Spellathon"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textColor="#ffffffff"
+        android:textSize="25sp" />
+
+    <View
+        android:layout_width="0dp"
+        android:layout_height="25dp" />
+
+    <TextView
+        android:id="@+id/tv_gameOver"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=" GAME OVER !"
+        android:textColor="#ffff1c4a"
+        android:textSize="35sp" />
+
+    <View
+        android:layout_width="0dp"
+        android:layout_height="30dp" />
+
+    <TextView
+        android:id="@+id/tv_displayScore"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#ffffffff"
+
+        android:textSize="30sp" />
+
+    <View
+        android:layout_width="0dp"
+        android:layout_height="30dp" />
+
+    <TextView
+        android:id="@+id/tv_playagain"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Play Again"
+        android:textColor="#ffffffff"
+        android:textSize="25sp" />
+
+    <View
+        android:layout_width="0dp"
+        android:layout_height="30dp" />
+
+    <TextView
+
+        android:id="@+id/tv_showSolution"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Show Solution" />
+
+</LinearLayout>
+<!-- From: file:/F:/AndroidStudio/Spellathon/app/src/main/res/layout/gameover_screen.xml -->

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Spellathon</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="how_to_play">"
+        Find a word using the combinations of the letters shown .
+        All the letters must include the center letter.
+    	All the words must be mimumim of 4 letters .
+    	Atleast one letter should be the combination of all letters .
+        "</string>
+
+</resources>

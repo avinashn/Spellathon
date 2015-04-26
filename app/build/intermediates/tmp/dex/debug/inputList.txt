@@ -1,0 +1,5 @@
+F:\AndroidStudio\Spellathon\app\build\intermediates\classes\debug
+F:\AndroidStudio\Spellathon\app\build\intermediates\pre-dexed\debug\support-annotations-21.0.3-0525436067ab6f9049fff76ca5ad7ccc130210fa.jar
+F:\AndroidStudio\Spellathon\app\build\intermediates\pre-dexed\debug\internal_impl-21.0.3-cd8bc3ff26cccecfbe424f58e8ad383bcde774cc.jar
+F:\AndroidStudio\Spellathon\app\build\intermediates\pre-dexed\debug\classes-204449ff145795d2b64dae3963206f4f34369db5.jar
+F:\AndroidStudio\Spellathon\app\build\intermediates\pre-dexed\debug\classes-52fed79af3ee0888d8a52f679b36c531cb757f76.jar
