@@ -135,3 +135,5 @@ public class WordsList {
     List<String> set50 = new ArrayList<>(Arrays.asList("cart","rate","tare","tear","tree","crate","caret","react","recta","trace","erect","create","retrace","terrace"));
     // 14 words
 }
+
+

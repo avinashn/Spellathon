@@ -4,6 +4,7 @@ import android.app.Activity;
 import android.app.AlertDialog;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.content.res.AssetManager;
 import android.os.Bundle;
 import android.view.View;
 import android.view.View.OnClickListener;
@@ -13,8 +14,15 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.InputStreamReader;
 import java.util.ArrayList;
+import java.util.HashSet;
+import java.util.Iterator;
 import java.util.Random;
+import java.util.Set;
 
 
 public class MainActivity extends Activity implements OnClickListener {
@@ -27,7 +35,7 @@ public class MainActivity extends Activity implements OnClickListener {
     ArrayList<TextView> myTextViewList;
     WordsList w = new WordsList();
     int counter = 0;
-
+    BufferedReader reader;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -39,6 +47,26 @@ public class MainActivity extends Activity implements OnClickListener {
     }
 
     private void gameLogic() {
+        Random r = new Random();
+        Set<Character> mySet = new <Character>HashSet();
+        while (mySet.size() != 7) {
+            char c = (char) (r.nextInt(26) + 'a');
+            mySet.add(c);
+        }
+
+        Iterator iter = mySet.iterator();
+        while (iter.hasNext()) {
+
+            b1.setText(iter.next().toString());
+            b2.setText(iter.next().toString());
+            b3.setText(iter.next().toString());
+            b4.setText(iter.next().toString());
+            b5.setText(iter.next().toString());
+            b6.setText(iter.next().toString());
+            b7.setText(iter.next().toString());
+        }
+    }
+   /* private void gameLogic() {
         Random randomGenerator = new Random();
         randomInt = randomGenerator.nextInt(50);
 
@@ -553,7 +581,7 @@ public class MainActivity extends Activity implements OnClickListener {
                 break;
         }
 
-    }
+    }*/
 
     private void Initialize() {
 
@@ -676,15 +704,69 @@ public class MainActivity extends Activity implements OnClickListener {
     public void checkValidOrNot() {
         String ss = (res.getText()).toString();
         String middle = b2.getText().toString();
-        if (ss.length() < 4) {
+   /*    if (ss.length() < 4) {
             Toast.makeText(this, "Word Should me minumim of 4 letters !", Toast.LENGTH_SHORT)
                     .show();
         } else if (!ss.contains(middle)) {
 
             Toast.makeText(this, "Word must contain middle letter !", Toast.LENGTH_SHORT)
                     .show();
-        }
-        if (randomInt == 1) {
+        }*/
+
+
+        try {
+            final InputStream file = getAssets().open("words.txt");
+            BufferedReader reader = new BufferedReader(new InputStreamReader(file));
+            String line;
+            while ((line=reader.readLine()) != null) {
+
+
+                Toast.makeText(this, line, Toast.LENGTH_SHORT)
+                        .show();
+                if (ss.equals(line)) {
+                    Toast.makeText(this, "Working!", Toast.LENGTH_SHORT)
+                            .show();
+                    TextView tv = myTextViewList.get(counter);
+                    tv.setText(line);
+                } else {
+                    Toast.makeText(this, "Not found !", Toast.LENGTH_SHORT)
+                            .show();
+
+                }
+            }
+        } catch (IOException ioe) {
+            ioe.printStackTrace();
+
+       /* try{
+            // Open the file that is the first
+            // command line parameter
+            FileInputStream fstream = new FileInputStream("words.txt");
+            // Get the object of DataInputStream
+            DataInputStream in = new DataInputStream(fstream);
+            BufferedReader br = new BufferedReader(new InputStreamReader(in));
+            String strLine;
+            //Read File Line By Line
+            while ((strLine = br.readLine()) != null)   {
+                // Print the content on the console
+               // System.out.println (strLine);
+                Toast.makeText(this, strLine, Toast.LENGTH_SHORT)
+                        .show();
+                *//*if(ss == strLine.toLowerCase()){
+                    TextView tv = myTextViewList.get(counter);
+                    tv.setText(strLine);
+                }
+                else
+                    Toast.makeText(this, "Invalid word ! Try Again", Toast.LENGTH_SHORT)
+                            .show();*//*
+
+            }
+            //Close the input stream
+            in.close();
+        }catch (Exception e){//Catch exception if any
+            System.err.println("Error: " + e.getMessage());
+        }*/
+
+       /* if (randomInt == 1) {
 
 
             if (!w.set1.contains(ss)) {
@@ -1825,11 +1907,11 @@ public class MainActivity extends Activity implements OnClickListener {
                 }
 
             }
+        }*/
+
         }
 
     }
-
-
     @Override
     public void onBackPressed() {
         new AlertDialog.Builder(this)

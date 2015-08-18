@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <!-- From: file:/F:/AndroidStudio/Spellathon/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/21.0.3/res/values/values.xml -->
+    <!-- From: file:/home/innovator/Downloads/Spellathon/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/21.0.3/res/values/values.xml -->
     <eat-comment/>
     <attr format="reference" name="drawerArrowStyle"/>
     <attr format="dimension" name="height"/>
@@ -153,7 +153,7 @@
     <string name="abc_shareactionprovider_share_with">Share with</string>
     <string name="abc_shareactionprovider_share_with_application">Share with %s</string>
     <string name="abc_toolbar_collapse_description">Collapse</string>
-    <!-- From: file:/F:/AndroidStudio/Spellathon/app/src/main/res/values/strings.xml -->
+    <!-- From: file:/home/innovator/Downloads/Spellathon/app/src/main/res/values/strings.xml -->
     <eat-comment/>
     <string name="app_name">Spellathon</string>
     <string name="hello_world">Hello world!</string>
@@ -163,7 +163,7 @@
     	All the words must be mimumim of 4 letters .
     	Atleast one letter should be the combination of all letters .
         "</string>
-    <!-- From: file:/F:/AndroidStudio/Spellathon/app/src/main/res/values/styles.xml -->
+    <!-- From: file:/home/innovator/Downloads/Spellathon/app/src/main/res/values/styles.xml -->
     <eat-comment/>
     <style name="AppBaseTheme" parent="Theme.AppCompat.Light">
         <!--
@@ -175,7 +175,7 @@
     <style name="AppTheme" parent="AppBaseTheme">
         <!-- All customizations that are NOT specific to a particular API-level can go here. -->
     </style>
-    <!-- From: file:/F:/AndroidStudio/Spellathon/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/21.0.3/res/values/values.xml -->
+    <!-- From: file:/home/innovator/Downloads/Spellathon/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/21.0.3/res/values/values.xml -->
     <eat-comment/>
     <style name="Base.TextAppearance.AppCompat" parent="android:TextAppearance">
         <item name="android:textColor">?android:textColorPrimary</item>

@@ -1,5 +1,5 @@
-F:\AndroidStudio\Spellathon\app\build\intermediates\classes\debug
-F:\AndroidStudio\Spellathon\app\build\intermediates\pre-dexed\debug\support-annotations-21.0.3-0525436067ab6f9049fff76ca5ad7ccc130210fa.jar
-F:\AndroidStudio\Spellathon\app\build\intermediates\pre-dexed\debug\internal_impl-21.0.3-cd8bc3ff26cccecfbe424f58e8ad383bcde774cc.jar
-F:\AndroidStudio\Spellathon\app\build\intermediates\pre-dexed\debug\classes-204449ff145795d2b64dae3963206f4f34369db5.jar
-F:\AndroidStudio\Spellathon\app\build\intermediates\pre-dexed\debug\classes-52fed79af3ee0888d8a52f679b36c531cb757f76.jar
+/home/innovator/Downloads/Spellathon/app/build/intermediates/classes/debug
+/home/innovator/Downloads/Spellathon/app/build/intermediates/pre-dexed/debug/support-annotations-21.0.3-7bb6c699986ae3b98fe6110d37a1b5c18c0e0f09.jar
+/home/innovator/Downloads/Spellathon/app/build/intermediates/pre-dexed/debug/internal_impl-21.0.3-fbc768a64946ccc915bd6fabb7cbcce6ee57b3e8.jar
+/home/innovator/Downloads/Spellathon/app/build/intermediates/pre-dexed/debug/classes-1e64c7e551e1cab0381ca12084fb26dcd1f2294c.jar
+/home/innovator/Downloads/Spellathon/app/build/intermediates/pre-dexed/debug/classes-7d71be9efc574055fed25e7c207a2f91e90d447a.jar
