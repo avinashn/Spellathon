@@ -150,25 +150,27 @@ public class MainActivity extends Activity implements OnClickListener {
                 break;
             case R.id.button7:
                 res.append(((Button) v).getText().toString());
-
                 break;
             case R.id.gameMode3:
                 gameMode = 3;
+                gm3.setTextColor(this.getResources().getColor(R.color.material_deep_teal_500));
                 break;
             case R.id.gameMode4:
+                gm4.setTextColor(this.getResources().getColor(R.color.material_deep_teal_500));
                 gameMode = 4;
                 break;
             case R.id.gameMode5:
+                gm5.setTextColor(this.getResources().getColor(R.color.material_deep_teal_500));
                 gameMode = 5;
                 break;
             case R.id.gameMode6:
+                gm6.setTextColor(this.getResources().getColor(R.color.material_deep_teal_500));
                 gameMode = 6;
                 break;
             case R.id.gameMode7:
+                gm7.setTextColor(this.getResources().getColor(R.color.material_deep_teal_500));
                 gameMode = 7;
                 break;
-
-
             case R.id.submit:
 
                 checkValidOrNot();
