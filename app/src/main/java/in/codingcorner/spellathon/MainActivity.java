@@ -27,9 +27,9 @@ import java.util.Set;
 public class MainActivity extends Activity implements OnClickListener {
 
     Button b1, b2, b3, b4, b5, b6, b7, submit, back, howtoPlay, giveUp;
-    TextView score;
+    TextView score, gm3, gm4, gm5, gm6, gm7;
     EditText res;
-    int randomInt;
+    int randomInt, gameMode;
     LinearLayout myLayout;
     ArrayList<TextView> myTextViewList;
     WordsList w = new WordsList();
@@ -84,6 +84,18 @@ public class MainActivity extends Activity implements OnClickListener {
         b5 = (Button) findViewById(R.id.button5);
         b6 = (Button) findViewById(R.id.button6);
         b7 = (Button) findViewById(R.id.button7);
+
+        gm3 = (TextView) findViewById(R.id.gameMode3);
+        gm4 = (TextView) findViewById(R.id.gameMode4);
+        gm5 = (TextView) findViewById(R.id.gameMode5);
+        gm6 = (TextView) findViewById(R.id.gameMode6);
+        gm7 = (TextView) findViewById(R.id.gameMode7);
+
+        gm3.setOnClickListener(this);
+        gm4.setOnClickListener(this);
+        gm5.setOnClickListener(this);
+        gm6.setOnClickListener(this);
+        gm7.setOnClickListener(this);
 
         b1.setOnClickListener(this);
         b2.setOnClickListener(this);
@@ -140,6 +152,23 @@ public class MainActivity extends Activity implements OnClickListener {
                 res.append(((Button) v).getText().toString());
 
                 break;
+            case R.id.gameMode3:
+                gameMode = 3;
+                break;
+            case R.id.gameMode4:
+                gameMode = 4;
+                break;
+            case R.id.gameMode5:
+                gameMode = 5;
+                break;
+            case R.id.gameMode6:
+                gameMode = 6;
+                break;
+            case R.id.gameMode7:
+                gameMode = 7;
+                break;
+
+
             case R.id.submit:
 
                 checkValidOrNot();
@@ -188,8 +217,8 @@ public class MainActivity extends Activity implements OnClickListener {
     public void checkValidOrNot() {
         String ss = (res.getText()).toString();
         String middle = b2.getText().toString();
-        if (ss.length() < 3) {
-            Toast.makeText(this, "Word Should me minumim of 4 letters !", Toast.LENGTH_SHORT)
+        if (ss.length() < gameMode) {
+            Toast.makeText(this, "Word Should me minumim of " + gameMode + " letters !", Toast.LENGTH_SHORT)
                     .show();
         } else if (ss.length() == 0) {
             Toast.makeText(this, "Please enter a word !", Toast.LENGTH_SHORT)
@@ -201,7 +230,7 @@ public class MainActivity extends Activity implements OnClickListener {
         } else {
             try {
 
-                final InputStream file = getAssets().open("length3file.txt");
+                final InputStream file = getAssets().open("length" + gameMode + "file.txt");
                 BufferedReader reader = new BufferedReader(new InputStreamReader(file));
                 String line;
                 StringBuilder text = new StringBuilder();

@@ -416,6 +416,7 @@
                             android:layout_height="0dp" />
 
                         <TextView
+                            android:id="@+id/gameMode3"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="3" />
@@ -425,6 +426,7 @@
                             android:layout_height="0dp" />
 
                         <TextView
+                            android:id="@+id/gameMode4"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="4" />
@@ -434,6 +436,7 @@
                             android:layout_height="0dp" />
 
                         <TextView
+                            android:id="@+id/gameMode5"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="5" />
@@ -443,6 +446,7 @@
                             android:layout_height="0dp" />
 
                         <TextView
+                            android:id="@+id/gameMode6"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="6" />
@@ -452,6 +456,7 @@
                             android:layout_height="0dp" />
 
                         <TextView
+                            android:id="@+id/gameMode7"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="7" />
