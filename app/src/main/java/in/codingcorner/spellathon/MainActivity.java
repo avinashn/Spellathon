@@ -4,7 +4,6 @@ import android.app.Activity;
 import android.app.AlertDialog;
 import android.content.DialogInterface;
 import android.content.Intent;
-import android.content.res.AssetManager;
 import android.os.Bundle;
 import android.view.View;
 import android.view.View.OnClickListener;
@@ -66,522 +65,7 @@ public class MainActivity extends Activity implements OnClickListener {
             b7.setText(iter.next().toString());
         }
     }
-   /* private void gameLogic() {
-        Random randomGenerator = new Random();
-        randomInt = randomGenerator.nextInt(50);
 
-        switch (randomInt) {
-
-
-            case 1:
-                score.setText(" 0 /  19");
-                b1.setText("d");
-                b2.setText("a");
-                b3.setText("i");
-                b4.setText("s");
-                b5.setText("a");
-                b6.setText("e");
-                b7.setText("n");
-                break;
-            case 2:
-                score.setText(" 0 /  20");
-                b1.setText("f");
-                b2.setText("r");
-                b3.setText("d");
-                b4.setText("e");
-                b5.setText("l");
-                b6.setText("o");
-                b7.setText("o");
-                break;
-            case 3:
-                score.setText(" 0 /  21");
-                b1.setText("u");
-                b2.setText("a");
-                b3.setText("d");
-                b4.setText("m");
-                b5.setText("l");
-                b6.setText("l");
-                b7.setText("e");
-                break;
-            case 4:
-                score.setText(" 0 /  17");
-                b1.setText("r");
-                b2.setText("e");
-                b3.setText("d");
-                b4.setText("i");
-                b5.setText("v");
-                b6.setText("v");
-                b7.setText("e");
-                break;
-            case 5:
-                score.setText(" 0 /  14");
-                b1.setText("v");
-                b2.setText("r");
-                b3.setText("e");
-                b4.setText("e");
-                b5.setText("l");
-                b6.setText("i");
-                b7.setText("e");
-
-                break;
-            case 6:
-                score.setText(" 0 /  10");
-                b1.setText("a");
-                b2.setText("m");
-                b3.setText("e");
-                b4.setText("a");
-                b5.setText("i");
-                b6.setText("n");
-                b7.setText("a");
-                break;
-            case 7:
-                score.setText(" 0 /  5");
-                b1.setText("a");
-                b2.setText("u");
-                b3.setText("e");
-                b4.setText("v");
-                b5.setText("y");
-                b6.setText("r");
-                b7.setText("q");
-                break;
-            case 8:
-                score.setText(" 0 /  11");
-                b1.setText("r");
-                b2.setText("e");
-                b3.setText("e");
-                b4.setText("r");
-                b5.setText("v");
-                b6.setText("e");
-                b7.setText("s");
-                break;
-            case 9:
-                score.setText(" 0 /  4");
-                b1.setText("l");
-                b2.setText("d");
-                b3.setText("m");
-                b4.setText("l");
-                b5.setText("r");
-                b6.setText("a");
-                b7.setText("a");
-                break;
-            case 10:
-                score.setText(" 0 /  27");
-                b1.setText("s");
-                b2.setText("d");
-                b3.setText("r");
-                b4.setText("r");
-                b5.setText("e");
-                b6.setText("a");
-                b7.setText("t");
-                break;
-            case 11:
-                score.setText(" 0 /  11");
-                b1.setText("r");
-                b2.setText("k");
-                b3.setText("a");
-                b4.setText("l");
-                b5.setText("s");
-                b6.setText("e");
-                b7.setText("p");
-                break;
-            case 12:
-                score.setText(" 0 /  20");
-                b1.setText("u");
-                b2.setText("r");
-                b3.setText("e");
-                b4.setText("s");
-                b5.setText("a");
-                b6.setText("f");
-                b7.setText("l");
-                break;
-            case 13:
-                score.setText(" 0 /  24");
-                b1.setText("m");
-                b2.setText("a");
-                b3.setText("r");
-                b4.setText("s");
-                b5.setText("t");
-                b6.setText("n");
-                b7.setText("o");
-                break;
-            case 14:
-                score.setText(" 0 /  24");
-                b1.setText("a");
-                b2.setText("d");
-                b3.setText("n");
-                b4.setText("g");
-                b5.setText("r");
-                b6.setText("e");
-                b7.setText("e");
-                break;
-            case 15:
-                score.setText(" 0 /  11");
-                b1.setText("n");
-                b2.setText("r");
-                b3.setText("s");
-                b4.setText("o");
-                b5.setText("f");
-                b6.setText("a");
-                b7.setText("i");
-                break;
-            case 16:
-                score.setText(" 0 /  3");
-                b1.setText("n");
-                b2.setText("v");
-                b3.setText("i");
-                b4.setText("m");
-                b5.setText("d");
-                b6.setText("f");
-                b7.setText("l");
-                break;
-            case 17:
-                score.setText(" 0 /  6");
-                b1.setText("a");
-                b2.setText("e");
-                b3.setText("e");
-                b4.setText("e");
-                b5.setText("c");
-                b6.setText("s");
-                b7.setText("d");
-                break;
-            case 18:
-                score.setText(" 0 /  12");
-                b1.setText("a");
-                b2.setText("v");
-                b3.setText("s");
-                b4.setText("g");
-                b5.setText("e");
-                b6.setText("e");
-                b7.setText("l");
-                break;
-            case 19:
-                score.setText(" 0 /  4");
-                b1.setText("y");
-                b2.setText("u");
-                b3.setText("v");
-                b4.setText("l");
-                b5.setText("b");
-                b6.setText("l");
-                b7.setText("o");
-                break;
-
-            case 20:
-                score.setText(" 0 /  4");
-                b1.setText("q");
-                b2.setText("y");
-                b3.setText("b");
-                b4.setText("o");
-                b5.setText("e");
-                b6.setText("u");
-                b7.setText("s");
-                break;
-            case 21:
-                score.setText(" 0 /  23");
-                b1.setText("r");
-                b2.setText("t");
-                b3.setText("d");
-                b4.setText("p");
-                b5.setText("e");
-                b6.setText("e");
-                b7.setText("a");
-                break;
-            case 22:
-                score.setText(" 0 /  12");
-                b1.setText("v");
-                b2.setText("a");
-                b3.setText("r");
-                b4.setText("t");
-                b5.setText("n");
-                b6.setText("i");
-                b7.setText("b");
-                break;
-            case 23:
-                score.setText(" 0 /  12");
-                b1.setText("r");
-                b2.setText("e");
-                b3.setText("c");
-                b4.setText("r");
-                b5.setText("p");
-                b6.setText("u");
-                b7.setText("o");
-                break;
-            case 24:
-                score.setText(" 0 /  8");
-                b1.setText("c");
-                b2.setText("i");
-                b3.setText("a");
-                b4.setText("a");
-                b5.setText("r");
-                b6.setText("n");
-                b7.setText("o");
-                break;
-            case 25:
-                score.setText(" 0 /  7");
-                b1.setText("l");
-                b2.setText("a");
-                b3.setText("c");
-                b4.setText("c");
-                b5.setText("i");
-                b6.setText("d");
-                b7.setText("f");
-                break;
-            case 26:
-                score.setText(" 0 /  7");
-                b1.setText("i");
-                b2.setText("a");
-                b3.setText("v");
-                b4.setText("l");
-                b5.setText("i");
-                b6.setText("n");
-                b7.setText("l");
-                break;
-            case 27:
-                score.setText(" 0 /  11");
-                b1.setText("t");
-                b2.setText("i");
-                b3.setText("m");
-                b4.setText("o");
-                b5.setText("x");
-                b6.setText("a");
-                b7.setText("e");
-                break;
-            case 28:
-                score.setText(" 0 /  16");
-                b1.setText("c");
-                b2.setText("d");
-                b3.setText("m");
-                b4.setText("u");
-                b5.setText("r");
-                b6.setText("b");
-                b7.setText("e");
-                break;
-            case 29:
-                score.setText(" 0 /  26");
-                b1.setText("w");
-                b2.setText("s");
-                b3.setText("e");
-                b4.setText("p");
-                b5.setText("o");
-                b6.setText("c");
-                b7.setText("h");
-                break;
-            case 30:
-                score.setText(" 0 /  3");
-                b1.setText("k");
-                b2.setText("j");
-                b3.setText("c");
-                b4.setText("t");
-                b5.setText("a");
-                b6.setText("p");
-                b7.setText("o");
-                break;
-            case 31:
-                score.setText(" 0 /  6");
-                b1.setText("x");
-                b2.setText("s");
-                b3.setText("e");
-                b4.setText("a");
-                b5.setText("a");
-                b6.setText("l");
-                b7.setText("u");
-                break;
-            case 32:
-                score.setText(" 0 /  23");
-                b1.setText("s");
-                b2.setText("e");
-                b3.setText("p");
-                b4.setText("s");
-                b5.setText("i");
-                b6.setText("r");
-                b7.setText("t");
-                break;
-            case 33:
-                score.setText(" 0 /  7");
-                b1.setText("y");
-                b2.setText("l");
-                b3.setText("b");
-                b4.setText("r");
-                b5.setText("i");
-                b6.setText("a");
-                b7.setText("r");
-                break;
-            case 34:
-                score.setText(" 0 /  8");
-                b1.setText("s");
-                b2.setText("p");
-                b3.setText("a");
-                b4.setText("h");
-                b5.setText("i");
-                b6.setText("k");
-                b7.setText("i");
-                break;
-            case 35:
-                score.setText(" 0 /  26");
-                b1.setText("n");
-                b2.setText("l");
-                b3.setText("n");
-                b4.setText("e");
-                b5.setText("i");
-                b6.setText("d");
-                b7.setText("s");
-                break;
-            case 36:
-                score.setText(" 0 /  16");
-                b1.setText("p");
-                b2.setText("c");
-                b3.setText("r");
-                b4.setText("e");
-                b5.setText("e");
-                b6.setText("a");
-                b7.setText("f");
-                break;
-            case 37:
-                score.setText(" 0 /  4");
-                b1.setText("f");
-                b2.setText("i");
-                b3.setText("c");
-                b4.setText("u");
-                b5.setText("e");
-                b6.setText("s");
-                b7.setText("f");
-                break;
-            case 38:
-                score.setText(" 0 /  10");
-                b1.setText("d");
-                b2.setText("e");
-                b3.setText("m");
-                b4.setText("e");
-                b5.setText("i");
-                b6.setText("s");
-                b7.setText("d");
-                break;
-            case 39:
-                score.setText(" 0 /  17");
-                b1.setText("l");
-                b2.setText("m");
-                b3.setText("g");
-                b4.setText("e");
-                b5.setText("e");
-                b6.setText("a");
-                b7.setText("n");
-                break;
-            case 40:
-                score.setText(" 0 /  4");
-                b1.setText("w");
-                b2.setText("w");
-                b3.setText("d");
-                b4.setText("o");
-                b5.setText("o");
-                b6.setText("l");
-                b7.setText("n");
-                break;
-            case 41:
-                score.setText(" 0 /  11");
-                b1.setText("t");
-                b2.setText("i");
-                b3.setText("i");
-                b4.setText("e");
-                b5.setText("s");
-                b6.setText("c");
-                b7.setText("d");
-                break;
-            case 42:
-                score.setText(" 0 /  6");
-                b1.setText("c");
-                b2.setText("y");
-                b3.setText("t");
-                b4.setText("r");
-                b5.setText("e");
-                b6.setText("r");
-                b7.setText("o");
-                break;
-            case 43:
-                score.setText(" 0 /  4");
-                b1.setText("n");
-                b2.setText("i");
-                b3.setText("t");
-                b4.setText("t");
-                b5.setText("i");
-                b6.setText("y");
-                b7.setText("r");
-                break;
-            case 44:
-                score.setText(" 0 /  19");
-                b1.setText("l");
-                b2.setText("a");
-                b3.setText("i");
-                b4.setText("e");
-                b5.setText("n");
-                b6.setText("n");
-                b7.setText("m");
-                break;
-            case 45:
-                score.setText(" 0 /  12");
-                b1.setText("g");
-                b2.setText("n");
-                b3.setText("r");
-                b4.setText("o");
-                b5.setText("w");
-                b6.setText("i");
-                b7.setText("n");
-                break;
-            case 46:
-                score.setText(" 0 /  6");
-                b1.setText("g");
-                b2.setText("a");
-                b3.setText("i");
-                b4.setText("l");
-                b5.setText("l");
-                b6.setText("a");
-                b7.setText("c");
-                break;
-            case 47:
-                score.setText(" 0 /  24");
-                b1.setText("d");
-                b2.setText("a");
-                b3.setText("r");
-                b4.setText("e");
-                b5.setText("e");
-                b6.setText("t");
-                b7.setText("f");
-                break;
-            case 48:
-                score.setText(" 0 /  7");
-                b1.setText("o");
-                b2.setText("d");
-                b3.setText("g");
-                b4.setText("e");
-                b5.setText("s");
-                b6.setText("n");
-                b7.setText("d");
-                break;
-            case 49:
-                score.setText(" 0 /  8");
-                b1.setText("s");
-                b2.setText("l");
-                b3.setText("a");
-                b4.setText("a");
-                b5.setText("a");
-                b6.setText("g");
-                b7.setText("n");
-                break;
-            case 0:
-                score.setText(" 0 /  14");
-                b1.setText("r");
-                b2.setText("t");
-                b3.setText("e");
-                b4.setText("a");
-                b5.setText("e");
-                b6.setText("c");
-                b7.setText("f");
-                break;
-
-
-            default:
-                break;
-        }
-
-    }*/
 
     private void Initialize() {
 
@@ -704,39 +188,61 @@ public class MainActivity extends Activity implements OnClickListener {
     public void checkValidOrNot() {
         String ss = (res.getText()).toString();
         String middle = b2.getText().toString();
-   /*    if (ss.length() < 4) {
+        if (ss.length() < 3) {
             Toast.makeText(this, "Word Should me minumim of 4 letters !", Toast.LENGTH_SHORT)
+                    .show();
+        } else if (ss.length() == 0) {
+            Toast.makeText(this, "Please enter a word !", Toast.LENGTH_SHORT)
                     .show();
         } else if (!ss.contains(middle)) {
 
             Toast.makeText(this, "Word must contain middle letter !", Toast.LENGTH_SHORT)
                     .show();
-        }*/
+        } else {
+            try {
 
+                final InputStream file = getAssets().open("length3file.txt");
+                BufferedReader reader = new BufferedReader(new InputStreamReader(file));
+                String line;
+                StringBuilder text = new StringBuilder();
+//            while ((line=reader.readLine()) != null) {
+//
+//                if (ss.equals(line)) {
+//                    Log.e("found",line);
+//                    Toast.makeText(this, "Working!", Toast.LENGTH_SHORT)
+//                            .show();
+//                    TextView tv = myTextViewList.get(counter);
+//                    tv.setText(line);
+//                    break;
+//                } else {
+//                    Log.e("not found","not found");
+//                    Toast.makeText(this, "Not found !", Toast.LENGTH_SHORT)
+//                            .show();
+//
+//
+//                }
+//
+//            }
 
-        try {
-            final InputStream file = getAssets().open("words.txt");
-            BufferedReader reader = new BufferedReader(new InputStreamReader(file));
-            String line;
-            while ((line=reader.readLine()) != null) {
-
-
-                Toast.makeText(this, line, Toast.LENGTH_SHORT)
-                        .show();
-                if (ss.equals(line)) {
-                    Toast.makeText(this, "Working!", Toast.LENGTH_SHORT)
-                            .show();
-                    TextView tv = myTextViewList.get(counter);
-                    tv.setText(line);
-                } else {
-                    Toast.makeText(this, "Not found !", Toast.LENGTH_SHORT)
-                            .show();
+                while ((line = reader.readLine()) != null) {
+                    if (ss.equals(line)) {
+                        text.append(line);
+                        text.append('\n');
+                        TextView tv = myTextViewList.get(counter);
+                        tv.append(text.toString());
+                        break;
+                    }
 
                 }
-            }
-        } catch (IOException ioe) {
-            ioe.printStackTrace();
 
+                if (text.toString().equals("") || text.toString().equals(null)) {
+                    Toast.makeText(this, "Not found !", Toast.LENGTH_SHORT)
+                            .show();
+                }
+            } catch (IOException ioe) {
+                ioe.printStackTrace();
+            }
+        }
        /* try{
             // Open the file that is the first
             // command line parameter
@@ -1909,9 +1415,9 @@ public class MainActivity extends Activity implements OnClickListener {
             }
         }*/
 
-        }
 
     }
+
     @Override
     public void onBackPressed() {
         new AlertDialog.Builder(this)
