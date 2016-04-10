@@ -29,7 +29,7 @@ public class MainActivity extends Activity implements OnClickListener {
     Button b1, b2, b3, b4, b5, b6, b7, submit, back, howtoPlay, giveUp;
     TextView score, gm3, gm4, gm5, gm6, gm7;
     EditText res;
-    int randomInt, gameMode;
+    int randomInt, gameMode = 4;
     LinearLayout myLayout;
     ArrayList<TextView> myTextViewList;
     WordsList w = new WordsList();
@@ -65,6 +65,20 @@ public class MainActivity extends Activity implements OnClickListener {
             b7.setText(iter.next().toString());
         }
     }
+/*String str = b1.getText().toString()+b2.getText().toString()+b3.getText().toString()+b4.getText().toString() + b5.getText().toString() + b6.getText().toString() + b7.getText().toString();
+       Log.e(str,"str");
+        permutation("",str);
+
+    }
+
+    private void permutation(String prefix, String str) {
+        int n = str.length();
+        if (n == 0) Log.e(prefix, "sid");
+        else {
+            for (int i = 0; i <= gameMode; i++)
+                permutation(prefix + str.charAt(i), str.substring(0, i) + str.substring(i+1, n));
+        }
+    }*/
 
 
     private void Initialize() {
@@ -152,24 +166,50 @@ public class MainActivity extends Activity implements OnClickListener {
                 res.append(((Button) v).getText().toString());
                 break;
             case R.id.gameMode3:
-                gameMode = 3;
-                gm3.setTextColor(this.getResources().getColor(R.color.material_deep_teal_500));
+                if (gameMode != 3) {
+                    gameMode = 3;
+                    gm3.setTextColor(this.getResources().getColor(R.color.material_deep_teal_500));
+                }
                 break;
             case R.id.gameMode4:
-                gm4.setTextColor(this.getResources().getColor(R.color.material_deep_teal_500));
-                gameMode = 4;
+                if (gameMode != 4) {
+                    gameMode = 4;
+                    gm4.setTextColor(this.getResources().getColor(R.color.material_deep_teal_500));
+                    /*gm3.setTextColor(null);
+                    gm5.setTextColor(null);
+                    gm6.setTextColor(null);
+                    gm7.setTextColor(null);*/
+                }
                 break;
             case R.id.gameMode5:
-                gm5.setTextColor(this.getResources().getColor(R.color.material_deep_teal_500));
-                gameMode = 5;
+                if (gameMode != 5) {
+                    gameMode = 5;
+                    gm5.setTextColor(this.getResources().getColor(R.color.material_deep_teal_500));
+                    /*gm4.setTextColor(null);
+                    gm3.setTextColor(null);
+                    gm6.setTextColor(null);
+                    gm7.setTextColor(null);*/
+                }
                 break;
             case R.id.gameMode6:
-                gm6.setTextColor(this.getResources().getColor(R.color.material_deep_teal_500));
-                gameMode = 6;
+                if (gameMode != 6) {
+                    gameMode = 6;
+                    gm6.setTextColor(this.getResources().getColor(R.color.material_deep_teal_500));
+                    /*gm4.setTextColor(null);
+                    gm5.setTextColor(null);
+                    gm3.setTextColor(null);
+                    gm7.setTextColor(null);*/
+                }
                 break;
             case R.id.gameMode7:
-                gm7.setTextColor(this.getResources().getColor(R.color.material_deep_teal_500));
-                gameMode = 7;
+                if (gameMode != 7) {
+                    gameMode = 7;
+                    gm7.setTextColor(this.getResources().getColor(R.color.material_deep_teal_500));
+                    /*gm4.setTextColor(null);
+                    gm5.setTextColor(null);
+                    gm6.setTextColor(null);
+                    gm3.setTextColor(null);*/
+                }
                 break;
             case R.id.submit:
 
@@ -232,7 +272,7 @@ public class MainActivity extends Activity implements OnClickListener {
         } else {
             try {
 
-                final InputStream file = getAssets().open("length" + gameMode + "file.txt");
+                final InputStream file = getAssets().open("length3file.txt");
                 BufferedReader reader = new BufferedReader(new InputStreamReader(file));
                 String line;
                 StringBuilder text = new StringBuilder();

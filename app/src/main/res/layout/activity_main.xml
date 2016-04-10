@@ -419,7 +419,8 @@
                             android:id="@+id/gameMode3"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="3" />
+                            android:text="3"
+                            android:textSize="25sp" />
 
                         <View
                             android:layout_width="10dp"
