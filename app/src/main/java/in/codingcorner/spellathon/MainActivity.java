@@ -5,6 +5,7 @@ import android.app.AlertDialog;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
@@ -17,7 +18,6 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
-import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.Iterator;
 import java.util.Random;
@@ -29,11 +29,13 @@ public class MainActivity extends Activity implements OnClickListener {
     Button b1, b2, b3, b4, b5, b6, b7, submit, back, howtoPlay, giveUp;
     TextView score, gm3, gm4, gm5, gm6, gm7;
     EditText res;
-    int randomInt, gameMode = 4;
+    int randomInt, gameMode;
     LinearLayout myLayout;
-    ArrayList<TextView> myTextViewList;
+    // ArrayList<TextView> myTextViewList;
+    TextView resTv;
     WordsList w = new WordsList();
     int counter = 0;
+    String filename;
     BufferedReader reader;
 
     @Override
@@ -43,6 +45,45 @@ public class MainActivity extends Activity implements OnClickListener {
         setContentView(R.layout.activity_main);
         Initialize();
         gameLogic();
+        String str = "abietin";
+        permutation(" ", str);
+
+
+    }
+
+
+    private void permutation(String prefix, String str) {
+
+        int n = str.length();
+        if (n == 0) {
+            //Log.e(prefix, "df");
+            //List<String> permutation = new ArrayList<>(Arrays.asList(""));
+            // permutation.add(prefix);
+           /* for (int fi=0;fi < permutation.size();fi++)
+            {
+                Log.i("Value of element "+fi,permutation.get(fi));
+            }*/
+            try {
+                BufferedReader br = new BufferedReader(new InputStreamReader(getAssets().open("length7file.txt")));
+
+                String line;
+                while ((line = br.readLine()) != null) {
+                    Log.e(line, "sad");
+                    if (line.contains(prefix)) {
+                        br.close();
+                        Log.e(line, "dsd");
+                    }
+                }
+                br.close();
+
+            } catch (IOException ioe) {
+                ioe.printStackTrace();
+            }
+
+        } else {
+            for (int i = 0; i < n; i++)
+                permutation(prefix + str.charAt(i), str.substring(0, i) + str.substring(i + 1, n));
+        }
     }
 
     private void gameLogic() {
@@ -64,21 +105,8 @@ public class MainActivity extends Activity implements OnClickListener {
             b6.setText(iter.next().toString());
             b7.setText(iter.next().toString());
         }
-    }
-/*String str = b1.getText().toString()+b2.getText().toString()+b3.getText().toString()+b4.getText().toString() + b5.getText().toString() + b6.getText().toString() + b7.getText().toString();
-       Log.e(str,"str");
-        permutation("",str);
 
     }
-
-    private void permutation(String prefix, String str) {
-        int n = str.length();
-        if (n == 0) Log.e(prefix, "sid");
-        else {
-            for (int i = 0; i <= gameMode; i++)
-                permutation(prefix + str.charAt(i), str.substring(0, i) + str.substring(i+1, n));
-        }
-    }*/
 
 
     private void Initialize() {
@@ -87,6 +115,7 @@ public class MainActivity extends Activity implements OnClickListener {
         submit = (Button) findViewById(R.id.submit);
         back = (Button) findViewById(R.id.back);
 
+        resTv = (TextView) findViewById(R.id.restextView);
         score = (TextView) findViewById(R.id.score);
         howtoPlay = (Button) findViewById(R.id.howtoPlay);
         giveUp = (Button) findViewById(R.id.giveUp);
@@ -110,6 +139,7 @@ public class MainActivity extends Activity implements OnClickListener {
         gm5.setOnClickListener(this);
         gm6.setOnClickListener(this);
         gm7.setOnClickListener(this);
+        gm4.setTextColor(this.getResources().getColor(R.color.material_deep_teal_500));
 
         b1.setOnClickListener(this);
         b2.setOnClickListener(this);
@@ -124,13 +154,16 @@ public class MainActivity extends Activity implements OnClickListener {
         giveUp.setOnClickListener(this);
         howtoPlay.setOnClickListener(this);
 
+        gameMode = 4;
+        filename = "length4file.txt";
+        //gm4.setTextColor(this.getResources().getColor(R.color.material_deep_teal_500));
 
-        myLayout = (LinearLayout) findViewById(R.id.tvLayout);
+        /*myLayout = (LinearLayout) findViewById(R.id.tvLayout);
         myTextViewList = new ArrayList<>();
 
         for (int i = 0; i < myLayout.getChildCount(); i++)
             if (myLayout.getChildAt(i) instanceof TextView)
-                myTextViewList.add((TextView) myLayout.getChildAt(i));
+                myTextViewList.add((TextView) myLayout.getChildAt(i));*/
 
     }
 
@@ -168,47 +201,61 @@ public class MainActivity extends Activity implements OnClickListener {
             case R.id.gameMode3:
                 if (gameMode != 3) {
                     gameMode = 3;
+                    filename = "length3file.txt";
+                    resTv.setText("");
                     gm3.setTextColor(this.getResources().getColor(R.color.material_deep_teal_500));
+                    gm4.setTextColor(this.getResources().getColor(R.color.button_material_dark));
+                    gm5.setTextColor(this.getResources().getColor(R.color.button_material_dark));
+                    gm6.setTextColor(this.getResources().getColor(R.color.button_material_dark));
+                    gm7.setTextColor(this.getResources().getColor(R.color.button_material_dark));
                 }
                 break;
             case R.id.gameMode4:
                 if (gameMode != 4) {
                     gameMode = 4;
+                    filename = "length4file.txt";
+                    resTv.setText("");
                     gm4.setTextColor(this.getResources().getColor(R.color.material_deep_teal_500));
-                    /*gm3.setTextColor(null);
-                    gm5.setTextColor(null);
-                    gm6.setTextColor(null);
-                    gm7.setTextColor(null);*/
+                    gm3.setTextColor(this.getResources().getColor(R.color.button_material_dark));
+                    gm5.setTextColor(this.getResources().getColor(R.color.button_material_dark));
+                    gm6.setTextColor(this.getResources().getColor(R.color.button_material_dark));
+                    gm7.setTextColor(this.getResources().getColor(R.color.button_material_dark));
                 }
                 break;
             case R.id.gameMode5:
                 if (gameMode != 5) {
                     gameMode = 5;
+                    filename = "length5file.txt";
+                    resTv.setText("");
                     gm5.setTextColor(this.getResources().getColor(R.color.material_deep_teal_500));
-                    /*gm4.setTextColor(null);
-                    gm3.setTextColor(null);
-                    gm6.setTextColor(null);
-                    gm7.setTextColor(null);*/
+                    gm4.setTextColor(this.getResources().getColor(R.color.button_material_dark));
+                    gm3.setTextColor(this.getResources().getColor(R.color.button_material_dark));
+                    gm6.setTextColor(this.getResources().getColor(R.color.button_material_dark));
+                    gm7.setTextColor(this.getResources().getColor(R.color.button_material_dark));
                 }
                 break;
             case R.id.gameMode6:
                 if (gameMode != 6) {
                     gameMode = 6;
+                    filename = "length6file.txt";
+                    resTv.setText("");
                     gm6.setTextColor(this.getResources().getColor(R.color.material_deep_teal_500));
-                    /*gm4.setTextColor(null);
-                    gm5.setTextColor(null);
-                    gm3.setTextColor(null);
-                    gm7.setTextColor(null);*/
+                    gm4.setTextColor(this.getResources().getColor(R.color.button_material_dark));
+                    gm5.setTextColor(this.getResources().getColor(R.color.button_material_dark));
+                    gm3.setTextColor(this.getResources().getColor(R.color.button_material_dark));
+                    gm7.setTextColor(this.getResources().getColor(R.color.button_material_dark));
                 }
                 break;
             case R.id.gameMode7:
                 if (gameMode != 7) {
                     gameMode = 7;
+                    filename = "length7file.txt";
+                    resTv.setText("");
                     gm7.setTextColor(this.getResources().getColor(R.color.material_deep_teal_500));
-                    /*gm4.setTextColor(null);
-                    gm5.setTextColor(null);
-                    gm6.setTextColor(null);
-                    gm3.setTextColor(null);*/
+                    gm4.setTextColor(this.getResources().getColor(R.color.button_material_dark));
+                    gm5.setTextColor(this.getResources().getColor(R.color.button_material_dark));
+                    gm6.setTextColor(this.getResources().getColor(R.color.button_material_dark));
+                    gm3.setTextColor(this.getResources().getColor(R.color.button_material_dark));
                 }
                 break;
             case R.id.submit:
@@ -266,13 +313,12 @@ public class MainActivity extends Activity implements OnClickListener {
             Toast.makeText(this, "Please enter a word !", Toast.LENGTH_SHORT)
                     .show();
         } else if (!ss.contains(middle)) {
-
             Toast.makeText(this, "Word must contain middle letter !", Toast.LENGTH_SHORT)
                     .show();
         } else {
             try {
-
-                final InputStream file = getAssets().open("length3file.txt");
+                final InputStream file = getAssets().open(filename);
+                Log.e(filename, "filename");
                 BufferedReader reader = new BufferedReader(new InputStreamReader(file));
                 String line;
                 StringBuilder text = new StringBuilder();
@@ -299,13 +345,11 @@ public class MainActivity extends Activity implements OnClickListener {
                     if (ss.equals(line)) {
                         text.append(line);
                         text.append('\n');
-                        TextView tv = myTextViewList.get(counter);
-                        tv.append(text.toString());
+                        resTv.append(text.toString());
                         break;
                     }
 
                 }
-
                 if (text.toString().equals("") || text.toString().equals(null)) {
                     Toast.makeText(this, "Not found !", Toast.LENGTH_SHORT)
                             .show();
